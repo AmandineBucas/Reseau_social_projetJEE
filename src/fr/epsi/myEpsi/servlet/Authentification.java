@@ -17,7 +17,7 @@ import fr.epsi.myEpsi.service.UserService;
 /**
  * Servlet implementation class Authentification
  */
-@WebServlet("/pages/connexion")
+@WebServlet("/Pages/Connection")
 public class Authentification extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
@@ -51,10 +51,10 @@ public class Authentification extends HttpServlet {
 			request.getSession().setAttribute("user", user);
 			
 			// Inclu la ressource dans la réponse
-			request.getRequestDispatcher("/pages/home").forward(request, response);
+			request.getRequestDispatcher("/Pages/Home").forward(request, response);
 			
 		}else{
-			request.getRequestDispatcher("/pages/authentification.jsp").forward(request, response);
+			request.getRequestDispatcher("/Pages/Connection.jsp").forward(request, response);
 		}
 	}
 

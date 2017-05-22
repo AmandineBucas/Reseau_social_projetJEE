@@ -16,7 +16,7 @@ import fr.epsi.myEpsi.service.UserService;
 /**
  * Servlet implementation class Inscription
  */
-@WebServlet("/pages/register")
+@WebServlet("/Pages/Registers")
 
 public class Inscription extends HttpServlet {
 	

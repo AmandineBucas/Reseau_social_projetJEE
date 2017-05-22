@@ -11,7 +11,6 @@ import fr.epsi.myEpsi.beans.Message;
 import fr.epsi.myEpsi.beans.User;
 import fr.epsi.myEpsi.dao.JDBC;
 import fr.epsi.myEpsi.dao.MessageDao;
-import fr.epsi.myEpsi.servlet.Authentification;
 
 public class MessageService implements IMessageService {
 	
