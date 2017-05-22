@@ -16,6 +16,10 @@ import fr.epsi.myEpsi.beans.User;
 
 public class MessageDao implements IMessageDao{
 	
+	public MessageDao() {
+		super();
+	}
+	
 	// Obtention d'une instance du logger à utiliser 
 	private static Logger logger = LogManager.getLogger(UserDao.class);
 
