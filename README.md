@@ -5,10 +5,10 @@ Equipe composée de : <p>
 - Alexandre Allais <p>
 - Amandine Bucas
 <p><p>
-TODOO : Création application "myEpsi" (JEE). Elle permet la gestion des messages stockés dans une base de données HsqlDB. <p><p>
-TODOO : Implémentation des actions en Servlet. <p><p>
+Création application "myEpsi" (JEE). Elle permet la gestion des messages stockés dans une base de données HsqlDB. <p><p>
+Implémentation des actions en Servlet. <p><p>
 TODOO : Implémentation des pages en JSP. <p><p>
-TODOO : Un message doit être défini par : <p>
+Un message doit être défini par : <p>
 - Un identifiant unique numérique (débute à 1) avec incrémentage automatique <p>
 - Un titre (texte de 140 caractères) <p>
 - Une description (memo) <p>
@@ -18,7 +18,7 @@ TODOO : Un message doit être défini par : <p>
 - Une date de modification <p><p>
 TODOO : Si le message est public alors il peut être vu par tous les utilisateurs <p>
 TODOO : Si le message est privé alors il ne peut pas être vu par tous les utilisateurs <p><p>
-TODOO : A l'arrivée sur la page d'accueil, possibilité de créer un compte à l'aide de : <p>
+A l'arrivée sur la page d'accueil, possibilité de créer un compte à l'aide de : <p>
 - Un email (qui doit être l'identifiant unique) <p>
 - Un mot de passe <p>
 - Une confirmation du mot de passe (vérification qu'il soit identique au mot de passe) <p><p>
