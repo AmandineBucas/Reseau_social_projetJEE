@@ -20,5 +20,8 @@ public interface IMessageDao {
 	
 	// Fonction pour effacer un message
 	void deleteMessage(Message message);
+	
+	// Liste de tous les messages
+	List<Message> getAllMessages(User user);
 
 }

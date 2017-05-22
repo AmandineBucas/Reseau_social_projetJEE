@@ -20,5 +20,8 @@ public interface IMessageService {
 	
 	// Mise à jour d'un message
 	void updateMessageStatus(Message message, int status);
+	
+	// Vu de tous les messages
+	List<Message> getAllMessages(User user);
 }
 

@@ -4,13 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>HomePage</title>
+<title>Supprimer un message</title>
 </head>
 <body>
-
-<div class="container">
-<h1>Messagerie Epsienne</h1>
-</div>
 
 </body>
 </html>

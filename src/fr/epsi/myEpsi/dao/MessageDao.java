@@ -15,13 +15,15 @@ import fr.epsi.myEpsi.beans.Message;
 import fr.epsi.myEpsi.beans.User;
 
 public class MessageDao implements IMessageDao{
+
+	// Obtention d'une instance du logger à utiliser 
+	private static Logger logger = LogManager.getLogger(UserDao.class);
+	
+	UserDao userDAO = new UserDao();
 	
 	public MessageDao() {
 		super();
 	}
-	
-	// Obtention d'une instance du logger à utiliser 
-	private static Logger logger = LogManager.getLogger(UserDao.class);
 
 	// Récupération d'une liste de messages
 	public List<Message> getListOfMessages(User user) {
@@ -172,5 +174,35 @@ public class MessageDao implements IMessageDao{
 		} catch (Exception e) {
 			logger.error("La mise à jour du message " + message.getId() + " n'a pas pu être effectué.");
 		}
+	}
+	
+	// Fonction affichant tous les messages
+	public List<Message> getAllMessages(User user) {
+		
+		// Connexion JDBC
+		JDBC connect = new JDBC();
+		
+		// Création d'une liste de messages
+		List<Message> messages= new ArrayList<>();
+
+		// Création d'un nouvel UserDAO
+		IUserDao userDao = new UserDao();
+		
+		// Résultats de la requête SQL
+		ResultSet result;
+		try {
+			result = connect.sqlRequete("SELECT * FROM messages WHERE status = 1 OR user_id = '" + user.getId() +"'");
+			while(result.next()){
+				String id = result.getString(4);
+				User user2 = userDao.getUserById(id);
+	            messages.add(new Message(result.getLong(1), result.getString(2)
+	            		, result.getString(3), user2,(Timestamp) result.getObject(5),(Timestamp) result.getObject(6), result.getInt(7)));
+	        }
+		} catch (SQLException e) {
+			
+			logger.error("Exception", e);
+		}
+		// Affiche le message
+		return messages;
 	}
 }

@@ -55,7 +55,10 @@ public class MessageService implements IMessageService {
 	public void updateMessageStatus(Message message, int status) {
 		messageDao.updateMessageStatus(message, status);
 	}
-
-
+	
+	// Liste de tous les messages
+	public List<Message> getAllMessages(User user) {
+		return messageDao.getAllMessages(user);
+	}
 
 }

@@ -7,12 +7,18 @@
 <title>Liste des messages</title>
 </head>
 <body>
+<a href="/fr/epsi/myEpsi/Pages/AddMessages.jsp">Ajouter un message</a>
 
-List<Message> messages = (List<Message>) request.getSession().getAttribute("messages");
+	List<Message> messages = (List<Message>) request.getSession().getAttribute("messages");
+	User user = (User) request.getSession().getAttribute("user");
 
 	for(Message message : messages){
 		out.println(message.getTitle());
 		out.println(message.getContent());
+	}
+	
+	if (user.getId() == message.getAuthor().getId()){
+		out.println("<a href='/fr.epsi.myEpsi/DeleteMessages?id=" + message.getId() +"'>Supprimer le message</a>") ;
 	}
 	
 </body>
